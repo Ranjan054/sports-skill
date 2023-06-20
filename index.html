@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SportsKill</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"
+        >
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+        <link rel="stylesheet" href="css/sportkill.css">
+        <style>
+        /* Add mobile-responsive styles here */
+
+        .required::after {
+            content: '*';
+            color: red;
+            margin-right: 5px;
+        }
+        </style>
+        <script>
+       function submitForm() {
+    // Retrieve form values
+    var name = encodeURIComponent(document.getElementById("name").value);
+    var emailField = encodeURIComponent(document.getElementById("email").value);
+    var phoneNumber = encodeURIComponent(document.getElementById("phoneNumber").value);
+    var location = encodeURIComponent(document.getElementById("location").value);
+
+    // Construct email body
+    var body = "Name: " + name + "%0D%0A";
+    body += "Email: " + emailField + "%0D%0A";
+    body += "Phone Number: " + phoneNumber + "%0D%0A";
+    body += "Location: " + location + "%0D%0A";
+
+    // Open email client
+    var email = "connect@sportskill.app";
+    var subject = "Enquiry on the Sportskill platform";
+    var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + body;
+    window.location.href = mailtoLink;
+
+    // Display thank you message
+    var messageElement = document.getElementById("message");
+    messageElement.textContent = "Thank you for contacting us. We will get back to you soon.";
+
+    return false; // Prevents the form from actually submitting
+}
+        </script>
+    </head>
+    <!-- <body id="body" onscroll="pageScroll()"> -->
+    <body id="body">
+        <div class="wrapper">
+            <div class="header-container">
+                <img
+                    src="images/bgmi.png"
+                    loading="lazy"
+                    alt=""
+                    class="hp-layer__code"
+                >
+                <div class="header">
+                    <div class="logo">
+                        <img src="images/logo.png">
+                    </div>
+                    <div class="mobile-menu-wrapper">
+                        <img id="hamburger" class="menuIcon" src="images/menu-icon.png">
+                        <div class="mobile-menu" id="mobile-menu">
+                            <a class="mobile-link" href="https://sportsskill.developmentbyte.com/services/">Services</a>
+                            <a class="mobile-link" href="https://sportsskill.developmentbyte.com/about-us/">About Us</a>
+                            <a class="mobile-link" data-toggle="modal" data-target="#enquireNow">Free Demo</a>
+                            <div class="loginBtn">
+                                <a href="https://academy.sportsskill.app/">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuToggle">
+                        <ul class="menuItems">
+                            <li class="active">
+                                <a href="">Home</a>
+                                <i></i>
+                            </li>
+                            <li>
+                                <a href="https://sportsskill.developmentbyte.com/services/">Services</a>
+                                <i></i>
+                            </li>
+                            <li>
+                                <a href="https://sportsskill.developmentbyte.com/about-us/">About Us</a>
+                                <i></i>
+                            </li>
+                            <li>
+                                <a href="">Community</a>
+                                <i></i>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" data-target="#enquireNow">Free Demo</a>
+                                <i></i>
+                            </li>
+                            <li class="loginBtn">
+                                <a href="https://academy.sportsskill.app/">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="bannerWrap clearfix" id="top-section">
+                    <div class="top-fold-wrapper">
+                        <div class="bannerContnt">
+                            <h1>
+                                Track, Progress
+                                <br>
+                                & Achieve
+                                <br>
+                                with
+                                <i>SkillStats</i>
+                            </h1>
+                            <p>Revolutionizing the ways by which the sports ecosystem tracks and analyses performance</p>
+                            <div class="bannerActions">
+                                <a class="knowMore" href="https://sportsskill.developmentbyte.com/services/">Know More</a>
+                            </div>
+                        </div>
+                        <div id="animate-img-wrapper" class="absolute transation img-wrapper-animate-top">
+                            <!-- <img id="phone-img" src="images/newphone2.png" class="transation phone-img phone-imgb"> -->
+                            <img id="phone-img" src="images/phoneimg-3.png" class="transation phone-img phone-imgb">
+                            <img src="images/content-2.png" class="transation cards card2 card2b" id="card-2">
+                            <img src="images/content-1.png" class="transation cards card1 card1b" id="card-1">
+                            <img src="images/content-3.png" class="transation cards card3 card3b" id="card-3">
+                        </div>
+                    </div>
+                    <div class="tab-slide" id="slider-right-wrapper">
+                        <div class="content c1 slide-right-text-wrapper">
+                            <h4>START SETTING GOALS & SEE PROGRESS</h4>
+                            <h2>Videos</h2>
+                            <p>
+                                Completely  a better way to do sports
+                                <br>
+                                <i>Record, Analyze and Achieve</i>
+                            </p>
+                            <a href="https://sportsskill.developmentbyte.com/services/">Know More</a>
+                        </div>
+                        <div class="content c1 slide-right-text-wrapper">
+                            <h4>SIMPLIFIED, HOLISTIC AND COMPREHENSIVE</h4>
+                            <h2>SkillStats</h2>
+                            <p>
+                                Dynamic illustrative charts.
+                                <br>
+                                <i>On & Off the field Data reports.</i>
+                            </p>
+                            <a href="https://sportsskill.developmentbyte.com/services/">Know More</a>
+                        </div>
+                        <div class="content c1 slide-right-text-wrapper">
+                            <h4>STOP DOING YOUR SPORT ALONE</h4>
+                            <h2>Challenge</h2>
+                            <p>
+                                Discover a community of Players.
+                                <br>
+                                <i>Challange, Progress & earn SkillCoins</i>
+                            </p>
+                            <a href="https://sportsskill.developmentbyte.com/services/">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="counterSection clearfix">
+            <div class="container">
+                <div class="bbb">
+                    <div class="maps">
+                        <img class="map-img" src="images/map.png">
+                        <p>
+                            We Have Achievers
+                            <i>
+                                All Around
+                                <br>
+                                The World
+                            </i>
+                        </p>
+                    </div>
+                    <div class="countersContent clearfix">
+                        <div class="setone clearfix">
+                            <div class="counter1 mainCounterWrap mg0">
+                                <div class="counter">
+                                    <span>73</span>
+                                    +
+                                </div>
+                                <b>Players</b>
+                            </div>
+                            <div class="counter2 mainCounterWrap">
+                                <div class="counter">
+                                    <span>42</span>
+                                    +
+                                </div>
+                                <b>Coaches</b>
+                            </div>
+                        </div>
+                        <div class="settwo clearfix">
+                            <div class="counter3 mainCounterWrap mg0">
+                                <div class="counter">
+                                    <span>11</span>
+                                    +
+                                </div>
+                                <b>Academies</b>
+                            </div>
+                            <div class="counter4 mainCounterWrap">
+                                <div class="counter">
+                                    <span>73</span>
+                                    +
+                                </div>
+                                <b>Cities</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aboutusSection clearfix">
+            <div class="container">
+                <div class="aaa">
+                    <div class="aboutContent clearfix">
+                        <span class="about-us-text">About Us</span>
+                        <h3>
+                            The perfect tool for gauging your
+                            <!-- <br > -->
+                            progress and reaching your full
+                            <!-- <br> -->
+                            potential
+                        </h3>
+                        <p>
+                            <!-- SportSkill empowers athletes of all levels to track progress, set goals, and improve skills. The app
+                        provides necessary information and guidance for reaching full potential. Start the journey to
+                        becoming a better athlete with SportSkill today. -->
+                            Start the journey to becoming a better athlete with SportsSkill.
+                        </p>
+                        <a href="https://sportsskill.developmentbyte.com/about-us/">Read More</a>
+                    </div>
+                    <div class="aboutImg clearfix">
+                        <img class="about-us" src="images/about-person.png">
+                        <img class="about-us-mobile" src="images/about-person1.png">
+                        <img src="images/about-one.png" class="about-one about-image">
+                        <img src="images/about-two.png" class="about-two about-image">
+                        <img src="images/about-three.png" class="about-three about-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="featuresWrap clearfix">
+            <div class="container">
+                <div class="hhh">
+                    <div class="featureImages">
+                        <div id="rotator">
+                            <div onclick="openModal('myModal1','communityPopup')">
+                                <!-- <a href=""> -->
+                                <img src="images/community.png">
+                                <!-- </a> -->
+                            </div>
+                            <div onclick="openModal('myModal1','fitnessPopup')">
+                                <img src="images/fitness.png">
+                                <!-- </a> -->
+                            </div>
+                            <div onclick="openModal('myModal1','videosPopup')">
+                                <img src="images/video.png">
+                                <!-- </a> -->
+                            </div>
+                            <!-- </div> -->
+                            <div onclick="openModal('myModal1','goalsPopup')">
+                                <img src="images/goals.png">
+                                <!-- </a> -->
+                            </div>
+                            <div onclick="openModal('myModal1','lifestylePopup')">
+                                <img src="images/lifestyle.png">
+                                <!-- </a> -->
+                            </div>
+                            <div onclick="openModal('myModal1','recoveryPopup')">
+                                <img src="images/recovery.png">
+                                <!-- </a> -->
+                            </div>
+                            <div onclick="openModal('myModal1','dataAnalyticsPopup')">
+                                <img src="images/data-analytics.png">
+                                <!-- </a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featureContent">
+                        <h3>
+                            Enhance Your fitness
+                            <br>
+                            Journey with Feature
+                            <br>
+                            packed app!
+                        </h3>
+                        <p>Revolutionize, Evolve & Conquer</p>
+                        <a href="https://sportsskill.developmentbyte.com/services/">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="communityWrap clearfix communityWrap-desktop">
+            <div class="container">
+                <div class="ttt">
+                    <h4>
+                        SportsSkills
+                        <i>Community</i>
+                    </h4>
+                    <div class="communityContent">
+                        <div class="slides mg0">
+                            <img src="images/person-1.png">
+                            <div class="clearfix">
+                                <span>April 23, 2023</span>
+                                <ul>
+                                    <li>Fitness</li>
+                                    <li>Health</li>
+                                </ul>
+                            </div>
+                            <p>
+                                The 10 best exercises to do
+                                <br>
+                                in your park
+                            </p>
+                        </div>
+                        <div class="slides">
+                            <img src="images/person-2.png">
+                            <div class="clearfix">
+                                <span>April 23, 2023</span>
+                                <ul>
+                                    <li>Fitness</li>
+                                    <li>Health</li>
+                                </ul>
+                            </div>
+                            <p>
+                                How to Choose The Right
+                                <br>
+                                Equipment For You
+                            </p>
+                        </div>
+                        <div class="slides">
+                            <img src="images/person-3.png">
+                            <div class="clearfix">
+                                <span>April 23, 2023</span>
+                                <ul>
+                                    <li>Fitness</li>
+                                    <li>Health</li>
+                                </ul>
+                            </div>
+                            <p>
+                                How to Maximum Time Spent
+                                <br>
+                                at the Gym.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="communityWrap clearfix communityWrap-mobile">
+            <div class="container">
+                <div class="ttt">
+                    <h4>
+                        SportsSkills
+                        <i>Community</i>
+                    </h4>
+                    <div class="sprts-slide-wrapper">
+                        <div class="communityContent sports-slide">
+                            <div>
+                                <div class="slides">
+                                    <img src="images/person-1.png">
+                                    <div class="clearfix slide-text-wrapper">
+                                        <span>April 23, 2023</span>
+                                        <ul>
+                                            <li>Fitness</li>
+                                            <li>Health</li>
+                                        </ul>
+                                    </div>
+                                    <p>
+                                        The 10 best exercises to do
+                                        <br>
+                                        in your park
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="slides">
+                                    <img src="images/person-2.png">
+                                    <div class="clearfix slide-text-wrapper">
+                                        <span>April 23, 2023</span>
+                                        <ul>
+                                            <li>Fitness</li>
+                                            <li>Health</li>
+                                        </ul>
+                                    </div>
+                                    <p>
+                                        How to Choose The Right
+                                        <br>
+                                        Equipment For You
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="slides">
+                                    <img src="images/person-3.png">
+                                    <div class="clearfix slide-text-wrapper">
+                                        <span>April 23, 2023</span>
+                                        <ul>
+                                            <li>Fitness</li>
+                                            <li>Health</li>
+                                        </ul>
+                                    </div>
+                                    <p>
+                                        How to Maximum Time Spent
+                                        <br>
+                                        at the Gym.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="slick-dot-temp"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer clearfix">
+            <div class="container">
+                <div class="upperfooter clearfix">
+                    <a href="" class="logo">
+                        <img src="images/logo.png">
+                    </a>
+                    <p>
+                        Ready to get started?
+                        <a data-toggle="modal" data-target="#enquireNow">Get Started</a>
+                    </p>
+                </div>
+                <div class="stroke"></div>
+                <div class="footerNav clearfix">
+                    <div class="footerLeftWrap">
+                        <p>
+                            Revolutionizing the ways by which the sports
+                            <br>
+                            ecosystem tracks and analyses performance
+                        </p>
+                        <ul class="demolinks clearfix">
+                            <li class="mg0 freeDemolink">
+                                <a data-toggle="modal" data-target="#enquireNow">Free Demo</a>
+                            </li>
+                            <!-- <li><a class="watchNow" href="">Watch Now <img src="images/watch-now.png" /></a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="footerRightWrap">
+                        <div class="links-mobile">
+                            <ul class="socialMedialinks">
+                                <li>
+                                    <a href="">FAQs</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#contactUs">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="https://play.google.com/store/apps/details?id=com.app.sportsskill">
+                                        <img src="images/playstore.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://apps.apple.com/ca/app/sportsskill/id1641702940">
+                                        <img src="images/appstore.png">
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="links">
+                                <li>
+                                    <a href="">Home</a>
+                                </li>
+                                <li>
+                                    <a href="https://sportsskill.developmentbyte.com/services/">Services</a>
+                                </li>
+                                <li>
+                                    <a href="">Community</a>
+                                </li>
+                                <li>
+                                    <a href="https://sportsskill.developmentbyte.com/about-us/">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix links-tab">
+                            <ul class="socialMedialinks">
+                                <li>
+                                    <a href="">FAQs</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#contactUs">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="https://play.google.com/store/apps/details?id=com.app.sportsskill">
+                                        <img src="images/playstore.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://apps.apple.com/ca/app/sportsskill/id1641702940">
+                                        <img src="images/appstore.png">
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="links">
+                                <li>
+                                    <a href="">Home</a>
+                                </li>
+                                <li>
+                                    <a href="https://sportsskill.developmentbyte.com/services/">Services</a>
+                                </li>
+                                <li>
+                                    <a href="">Community</a>
+                                </li>
+                                <li>
+                                    <a href="https://sportsskill.developmentbyte.com/about-us/">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="footerBottom clearfix">
+                    <ul class="tnc clearfix">
+                        <li>
+                            <a href="https://sportsskill.developmentbyte.com/terms-conditions/">Terms and Condition</a>
+                        </li>
+                        <li>
+                            <a href="https://sportsskill.developmentbyte.com/privacy-policy/">Privacy Policy</a>
+                        </li>
+                    </ul>
+                    <div class="socialIcons">
+                        <ul class="icon-wrapper">
+                            <li>
+                                <a href="">
+                                    <img src="images/fb.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://api.whatsapp.com/send?phone=9137476346">
+                                    <img src="images/whatsapp.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/twitter.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/sportsskill/">
+                                    <img src="images/linked-in.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/sportsskill_/">
+                                    <img src="images/insta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ready-start">
+                    <p >
+                        Ready to get started?
+                    </p>
+                    <a data-toggle="modal" data-target="#enquireNow">Get Started</a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="myModal1" class="popup modal_move">
+            <div class="popup-wrapper">
+                <button id="cModal" class="closePopup" onclick="closeModal('myModal1')">
+                    <img src="images/closemodal.png">
+                </button>
+
+                <div id="communityPopup" class="popupContent clearfix">
+                    <div class="clearfix popupHeader">
+                        <h2>
+                            <img src="images/modal-community.png">
+                            Community
+                        </h2>
+                        <div class="getstartedbtn">
+                            <a href="">Get started</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>
+                            SportSkill empowers athletes of all levels to track progress, set goals, and improve skills.
+                        The
+                        app has MatchPlay feature which enables the players to challange each other. This generates 
+                        competitive spirit among players with an interesting gaming method 
+                        involving SkillCoins and thereby creating a complete community.
+                        </p>
+                        <ul>
+                            <li>
+                                <img src="images/Community Image 1.png">
+                            </li>
+                            <li>
+                                <img src="images/Community image 2.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="goalsPopup" class="popupContent clearfix">
+                    <div class="clearfix popupHeader">
+                        <h2>
+                            <img src="images/modal-goals.png">
+                            Achieve Your Goals
+                        </h2>
+                        <div class="getstartedbtn">
+                            <a href="">Get started</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>
+                            SportSkill empowers athletes of all levels to track progress, set goals, and improve skills.
+                        The
+                        app provides necessary information and guidance for reaching full potential. Start the
+                        journey
+                        today towards becoming a better athlete with SportSkill.
+                        </p>
+                        <ul>
+                            <li>
+                                <img src="images/Goals Image 1.png">
+                            </li>
+                            <li>
+                                <img src="images/Goals Image 2.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="recoveryPopup" class="popupContent clearfix">
+                    <div class="clearfix popupHeader">
+                        <h2>
+                            <img src="images/modal-recovery.png">
+                            Recovery
+                        </h2>
+                        <div class="getstartedbtn">
+                            <a href="">Get started</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>
+                            SportSkill empowers athletes of all levels to track progress, set goals, and improve skills.
+                        Recovery is the most important factor which is often overlooked by most players and coaches.
+                        Recovery
+                        and performance are co-related. Understanding of this goes a long way in preventing injuries.
+                        </p>
+                        <ul>
+                            <li>
+                                <img src="images/Recovery image 1.png">
+                            </li>
+                            <li>
+                                <img src="images/Recovery Image 2.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="lifestylePopup" class="popupContent clearfix">
+                    <div class="clearfix popupHeader">
+                        <h2>
+                            <img src="images/modal-lifestyle.png">
+                            Lifestyle
+                        </h2>
+                        <div class="getstartedbtn">
+                            <a href="">Get started</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>
+                            SportSkill empowers athletes of all levels to track progress, set goals, and improve skills.
+                        Being a performance tracking app we cover on and off the field parameters which gives
+                        an
+                        idea of the player's lifestyle and provides insights on how to improve it.
+                        </p>
+                        <ul>
+                            <li>
+                                <img src="images/Life style Image 1.png">
+                            </li>
+                            <li>
+                                <img src="images/Life style Image 2.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="fitnessPopup" class="popupContent clearfix">
+                    <div class="clearfix popupHeader">
+                        <h2>
+                            <img src="images/modal-fitness.png">
+                            Fitness
+                        </h2>
+                        <div class="getstartedbtn">
+                            <a href="">Get started</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>
+                            SportSkill empowers athletes of all levels to track progress, set goals, and improve skills.
+                        The
+                        app promotes fitness through informative SkillStats, videos and blogs through which players
+                        get
+                        educated on different parameters to attain holistic improvement.
+                        </p>
+                        <ul>
+                            <li>
+                                <img src="images/fitness image 1.png">
+                            </li>
+                            <li>
+                                <img src="images/fitness image 2.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="dataAnalyticsPopup" class="popupContent clearfix">
+                    <div class="clearfix popupHeader">
+                        <h2>
+                            <img src="images/modal-dataAnalytics.png">
+                            Data & Analytics
+                        </h2>
+                        <div class="getstartedbtn">
+                            <a href="">Get started</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>
+                            SportSkill empowers athletes of all levels to track progress, set goals, and improve skills.
+                        The
+                        app collects data with very simple, easy and quick method to cover both, on-field
+                        and
+                        off-field data points. This gives a complete Skillstats report of the player.
+                        </p>
+                        <ul>
+                            <li>
+                                <img src="images/Data Analytics 1.png">
+                            </li>
+                            <li>
+                                <img src="images/Data Analytics 2.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="videosPopup" class="popupContent clearfix">
+                    <div class="clearfix popupHeader">
+                        <h2>
+                            <img src="images/modal-videos.png">
+                            Videos
+                        </h2>
+                        <div class="getstartedbtn">
+                            <a href="">Get started</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>
+                            SportSkill empowers athletes of all levels to track progress, set goals, and improve skills.
+                        Through the app players and coaches can upload their videos to set goals, interact, 
+                        track
+                        progress and generate holistic reports.
+                        </p>
+                        <ul>
+                            <li>
+                                <img src="images/Videos 1.png">
+                            </li>
+                            <li>
+                                <img src="images/Videos 2.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="contactUs"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="contactUsContent modal-content">
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <img src="images/closemodal.png">
+                    </button>
+                    <h3>
+                        <em>Contact</em>
+                        Us
+                    </h3>
+                    <form class="form">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control inputField"
+                                id="name"
+                                placeholder="Name"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                class="form-control inputField"
+                                id="email"
+                                placeholder="Email"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control inputField"
+                                id="phoneNumber"
+                                placeholder="Phone Number"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control inputField"
+                                id="location"
+                                placeholder="Location"
+                            >
+                        </div>
+                        <button type="submit" class="btn btn-default" id="submitBtn">Send</button>
+                    </form>
+                    <ul class="contacticons clearfix">
+                        <li class="clearfix">
+                            <img src="images/whatspp-icon.png">
+                            <div>
+                                <b>Whatsapp</b>
+                                <span>03 5432 1234</span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="images/call-icon.png">
+                            <div>
+                                <b>Academy Support</b>
+                                <span>admin@sportskill.app</span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="images/email-icon.png">
+                            <div>
+                                <b>Email</b>
+                                <span>info@Sportsskill.com</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div
+            class="modal fade"
+            id="enquireNow"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="contactUsContent modal-content">
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <img src="images/closemodal.png">
+                    </button>
+                    <h3>
+                        <em>Enquire</em>
+                        Now
+                    </h3>
+                    <form class="form" onsubmit="return submitForm()">
+                        <div class="form-group clearfix">
+                            <div class="form-check form-check-inline">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="inlineRadioOptions"
+                                    id="inlineRadio1"
+                                    value="option1"
+                                >
+                                <label class="form-check-label" for="inlineRadio1">Coaches</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="inlineRadioOptions"
+                                    id="inlineRadio2"
+                                    value="option2"
+                                >
+                                <label class="form-check-label" for="inlineRadio2">Players</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="inlineRadioOptions"
+                                    id="inlineRadio3"
+                                    value="option3"
+                                >
+                                <label class="form-check-label" for="inlineRadio3">Institution/Schools</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="required">Name:</label>
+                            <input
+                                type="text"
+                                class="form-control inputField"
+                                id="name"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="required">Email:</label>
+                            <input
+                                type="email"
+                                class="form-control inputField"
+                                id="email"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber" class="required">Phone Number:</label>
+                            <input
+                                type="text"
+                                class="form-control inputField"
+                                id="phoneNumber"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="required">Location:</label>
+                            <input
+                                type="text"
+                                class="form-control inputField"
+                                id="location"
+                                required
+                            >
+                        </div>
+                        <button type="submit" class="btn btn-default">Send</button>
+                        <p id="message" style="font-size: 20px;"></p>
+                    </form>
+                    <ul class="contacticons clearfix">
+                        <li class="clearfix">
+                            <img src="images/whatspp-icon.png">
+                            <div>
+                                <b>Whatsapp</b>
+                                <span>03 5432 1234</span>
+                            </div>
+                        </li>
+                        <li class="clearfix" id="aca">
+                            <img src="images/call-icon.png">
+                            <div>
+                                <b>Academy Support</b>
+                                <span>admin@sportskill.app</span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="images/email-icon.png">
+                            <div>
+                                <b>Email</b>
+                                <span>info@Sportsskill.com</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script> -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+    <!-- </div> -->
+    <!-- </div> -->
+</html>
