@@ -9,30 +9,6 @@ $.fn.isInViewport = function () {
 
 var counters_triggered = false;
 
-
-// function openModal(mod_name, popupname) {
-//   let modal = document.getElementById(mod_name);
-//   let popup = document.getElementById(popupname);
-
-//   // Add open class to make visible and trigger animation
-//   modal.classList.add('open');
-//   popup.classList.add('open');
-//   setTimeout(function(){
-//       $('body').addClass('hideOverflowY')
-//   },100)
-// }
-
-// function closeModal(mod_name) {
-//   let modal = document.getElementById(mod_name);
-//   // Remove open class to hide and trigger animation
-//   modal.classList.remove('open');
-//   $('body').removeClass('hideOverflowY');
-//   setTimeout(function(){
-//   $('.popupContent').removeClass('open')
-//   }, 500)
-// }
-
-
 function openModal(mod_name, popupname) {
     let modal = document.getElementById(mod_name);
     let popup = document.getElementById(popupname);
@@ -47,15 +23,8 @@ function openModal(mod_name, popupname) {
     // Remove open class to hide and trigger animation
     modal.classList.remove('open');
     // popup.classList.remove('open');
-    $('body').removeClass('hideOverflowY');
     $('.popupContent').removeClass('open')
   }
-
-
-
-// $(window).on('load', function(){
-//     $('.popup').css('display','block');
-// })
 
 $(document).ready(function() {
     window.scrollTo(0, 0);
@@ -91,13 +60,13 @@ $(window).scroll(function (e) {
 
     if ($(window).width() < 850) {
       if ($('.about-one').isInViewport()) {
-        $(".about-one").animate({ "left": "0px" }, 2000).addClass('visible');
+        $(".about-one").animate({ "left": "-52px" }, 2000).addClass('visible');
       }
       if ($('.about-two').isInViewport()) {
           $(".about-two").animate({ "right": "0" }, 2000).addClass('visible');
       }
       if ($('.about-three').isInViewport()) {
-          $(".about-three").animate({ "left": "0px" }, 2000).addClass('visible');
+          $(".about-three").animate({ "left": "-52px" }, 2000).addClass('visible');
       }
     }
 });
@@ -118,8 +87,10 @@ $("document").ready(function() {
     y = 250 * Math.sin(angle) + 150;
     }
     if ($(window).width() < 850) {
-      x = 120 * Math.cos(angle) + 120;
-      y = 120 * Math.sin(angle) + 120;
+      // x = 120 * Math.cos(angle) + 120;
+      // y = 120 * Math.sin(angle) + 120;
+      x = 115 * Math.cos(angle) + 83;
+      y = 115 * Math.sin(angle) + 83;
     }
     elem.style.position = 'absolute';
     elem.style.left = x + 'px';
