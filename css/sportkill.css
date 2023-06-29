@@ -1,9 +1,3 @@
-@font-face {
-  font-family: 'Bebas';
-  src: url('/fonts/bebas/Bebas-Regular.ttf'),
-    url('/fonts/bebas/Bebas-Regular.otf')
-}
-
 .clearfix::after {
   content: "";
   clear: both;
@@ -84,9 +78,9 @@ body {
 
 }
 
-/* body.hideOverflowY {
+.hideOverflowY {
   overflow-y: hidden;
-} */
+}
 
 .header {
   padding: 60px 0 0;
@@ -258,8 +252,9 @@ a:hover {
 
 .card2 {
   top: 260px;
-  left: 270px;
+  left: 100%;
   z-index: 3;
+  transform: translateX(-83%);
 }
 
 .card3 {
@@ -270,10 +265,11 @@ a:hover {
 
 .img-wrapper-animate-bottom>.card1b {
   top: 47%;
-  left: 0;
+  left: -17px;
   z-index: 2;
   transform: translateY(-50%);
   cursor: pointer;
+  width: 278px;
 }
 
 .img-wrapper-animate-bottom>.card2b {
@@ -281,11 +277,12 @@ a:hover {
   left: 0;
   z-index: 3;
   cursor: pointer;
+  transform: translateX(0);
 }
 
 .img-wrapper-animate-bottom>.card3b {
   top: 96%;
-  left: 0;
+  left: 6px;
   z-index: 4;
   transform: translateY(-100%);
   cursor: pointer;
@@ -296,15 +293,12 @@ a:hover {
   /* border-bottom: 4px solid #EC5723; */
   -webkit-filter: drop-shadow(0 0 15px #ffffff);
   filter: drop-shadow(0 0 15px #ffffff);
-  width: 280px;
+  width: 272px;
 }
 
-
-
-
-
-
-
+.img-wrapper-animate-bottom>.tab-card-active.w-fix {
+  width: 288px;
+}
 
 #v-pills-tabContent {
   /* float: left;
@@ -326,6 +320,7 @@ a:hover {
 .tab-slide>.content {
   padding: 130px 0 0 30px;
   /* height: 690px; */
+  width: 446px;
 }
 
 .tab-slide>div>img {
@@ -526,15 +521,16 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 136px;
-  height: 136px;
+  width: 120px;
+  height: 102px;
   text-align: center;
   line-height: 126px;
   color: #000;
   margin-bottom: 40px;
   border: 2px solid #fff;
-  font-size: 60px;
-  font-family: 'Bebas';
+  font-size: 55px;
+  font-family: "Bebas Neue", Sans-serif;
+  font-weight: 700;
 }
 
 .countersContent b {
@@ -549,7 +545,7 @@ a:hover {
 .mainCounterWrap {
   margin-left: 150px;
   float: left;
-  width: 150px;
+  width: 110px;
   text-align: center;
 }
 
@@ -557,9 +553,9 @@ a:hover {
   margin-left: 0
 }
 
-.setone,
-.settwo {
-  padding-left: 100px;
+.setone, .settwo {
+  display: flex;
+  padding-left: 140px;
 }
 
 .maps p {
@@ -601,7 +597,6 @@ a:hover {
   line-height: 58px;
   text-transform: capitalize;
   margin-bottom: 40px;
-  letter-spacing: -3px;
 }
 
 .aboutContent p {
@@ -650,16 +645,11 @@ a:hover {
 }
 
 .featuresWrap {
-
+  display: flex;
+  align-items: center;
   background: url("../images/feature-bg.png") no-repeat;
-
   background-size: 100%;
   background-attachment: fixed;
-
-
-
-
-
 }
 
 .featureContent a {
@@ -681,9 +671,6 @@ a:hover {
   line-height: 80px;
   text-transform: capitalize;
   margin-bottom: 40px;
-  letter-spacing: -3px;
-
-
 }
 
 .featureContent p {
@@ -718,7 +705,7 @@ a:hover {
   font-size: 51px;
   line-height: 80px;
   letter-spacing: -3px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   color: #fff;
   text-align: center;
 }
@@ -762,6 +749,7 @@ a:hover {
   background-color: #fff;
   padding: 3px 10px;
   margin-left: 5px;
+  border-radius: 5px;
 }
 
 .slides.mg0 {
@@ -942,7 +930,7 @@ a:hover {
 .popup {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   width: 100vw;
   height: 100vh;
   z-index: 100;
@@ -950,7 +938,6 @@ a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 16px;
   overflow: auto;
   visibility: hidden;
   opacity: 0;
@@ -971,9 +958,6 @@ a:hover {
   scrollbar-width: none;
   display: flex;
   justify-content: end;
-  background-color: #11111D;
-  box-shadow: 0 0 10px #312f2f;
-
 }
 
 .popup-wrapper::-webkit-scrollbar {
@@ -1320,11 +1304,6 @@ a:hover {
   cursor: pointer;
 }
 
-.featuresWrap {
-  display: flex;
-  align-items: center;
-}
-
 .featureImages {
   display: flex;
   float: left;
@@ -1399,6 +1378,29 @@ a:hover {
   width: 70%;
   right: -166px;
   top: -110px;
+}
+
+a:focus, a:hover {
+  color: #fff;
+}
+
+.about-us-img-wrapper img {
+  width: 100%;
+}
+
+.about-us-img-wrapper a {
+  color: #fff;
+  border-radius: 25px;
+  background: #5AA6D8;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  margin: 30px auto 0;
+  display: block;
+  width: fit-content;
 }
 
 
@@ -1521,7 +1523,7 @@ a:hover {
 
   .card2 {
     top: 70px;
-    left: 200px;
+    left: 284px;
   }
 
   .card3 {
@@ -1542,6 +1544,7 @@ a:hover {
   .tab-slide>.content {
     padding: 0;
     min-height: 256px;
+    width: fit-content;
   }
 
   .tab-slide .content h4 {
@@ -1584,11 +1587,12 @@ a:hover {
   }
 
   .img-wrapper-animate-bottom>.card1b {
-    top: 0;
-    left: 50%;
+    top: -1px;
+    left: 160px;
     z-index: 2;
     transform: translateX(-50%);
     cursor: pointer;
+    width: 103px;
   }
 
   .img-wrapper-animate-bottom>.card2b {
@@ -1599,11 +1603,15 @@ a:hover {
   }
 
   .img-wrapper-animate-bottom>.card3b {
-    top: 0;
+    top: -1px;
     left: 100%;
     z-index: 4;
     transform: translateX(-100%);
     cursor: pointer;
+  }
+
+  .img-wrapper-animate-bottom>.tab-card-active.w-fix {
+    width: 105px;
   }
 
   .bbb {
@@ -1634,24 +1642,23 @@ a:hover {
     font-size: 23px;
     line-height: 30px;
     margin-top: 16px;
+    margin-bottom: 30px;
   }
 
-  .setone,
-  .settwo {
+  .setone, .settwo {
     padding-left: 0;
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 154px;
+    width: 148px;
   }
 
   .setone {
-    margin-right: -8px;
+    margin-right: 30px;
   }
 
   .countersContent .counter {
-    width: 59px;
-    height: 59px;
+    width: 60px;
+    height: 60px;
     font-size: 34px;
     line-height: 41px;
     display: flex;
@@ -1749,16 +1756,18 @@ a:hover {
 
   .about-three {
     left: -100px;
-    top: 300px;
+    top: 281px;
     width: 190px;
   }
 
   .hhh {
     display: flex;
     flex-direction: column-reverse;
-    /* align-items: center; */
     width: 328px;
     margin: 0 auto;
+    background: url("../images/lines-bg.png") no-repeat;
+    background-position: top;
+    background-size: 328px 482px;
   }
 
   .featureContent {
@@ -1793,10 +1802,11 @@ a:hover {
   #rotator {
     width: 310px;
     height: 300px;
-
-    /* width: 228px;
-    height: 300px; */
     margin: 0 0;
+    /* background: url("../images/ellipse.png") no-repeat; */
+    background-position: top;
+    background-size: contain;
+
   }
 
   #rotator>div {
@@ -1842,7 +1852,19 @@ a:hover {
   }
 
   .tnc {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  .tnc li {
+    float: none;
+  }
+
+
+  .tnc li a {
+    font-size: 14px;
   }
 
   .icon-wrapper {
@@ -1885,9 +1907,9 @@ a:hover {
     padding: 11px 26px;
   }
 
-  .communityWrap-desktop {
+  /* .communityWrap-desktop {
     display: none;
-  }
+  } */
 
   .communityWrap-mobile {
     display: block;
@@ -1905,7 +1927,7 @@ a:hover {
 
   .slides span {
     font-size: 14px;
-    margin-right: 90px;
+    /* margin-right: 90px; */
   }
 
   .slides {
@@ -1931,7 +1953,7 @@ a:hover {
   .slide-text-wrapper {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
   }
 
   .slick-dots {
@@ -1969,11 +1991,12 @@ a:hover {
   .img-wrapper-animate-bottom>.tab-card-active {
     -webkit-filter: drop-shadow(0 0 15px #ffffff);
     filter: drop-shadow(0 0 10px #ffffff);
-    width: 108px;
+    width: 105px;
   }
 
   .popup {
-    /* padding: 0; */
+    justify-content: center;
+    padding: 16px;
   }
 
   .popup-wrapper {
@@ -2107,4 +2130,26 @@ a:hover {
   .closePopup {
     right: 26px;
   }
+
+  .contacticons li img {
+    margin-right: 44px;
+    width: 35px;
+  }
+
+  .contacticons li {
+    align-items: center;
+  }
+  .featuresWrap {
+    background-image: none;
+  }
+
+  .about-us-img-wrapper a {
+    font-size: 11px;
+    padding: 10px 40px;
+  }
+
+  .upperfooter .logo {
+    width: auto;
+  }
+
 }

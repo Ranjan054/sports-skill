@@ -9,6 +9,8 @@ $.fn.isInViewport = function () {
 
 var counters_triggered = false;
 
+console.log(document.documentElement, "html");
+
 function openModal(mod_name, popupname) {
     let modal = document.getElementById(mod_name);
     let popup = document.getElementById(popupname);
@@ -16,6 +18,10 @@ function openModal(mod_name, popupname) {
     // Add open class to make visible and trigger animation
     modal.classList.add('open');
     popup.classList.add('open');
+    setTimeout(function(){
+      document.documentElement.classList.add('hideOverflowY');
+      $('body').addClass('hideOverflowY');
+    },100)
   }
   
   function closeModal(mod_name) {
@@ -24,6 +30,8 @@ function openModal(mod_name, popupname) {
     modal.classList.remove('open');
     // popup.classList.remove('open');
     $('.popupContent').removeClass('open')
+    $('body').removeClass('hideOverflowY');
+    document.documentElement.classList.remove('hideOverflowY');
   }
 
 $(document).ready(function() {
@@ -60,13 +68,13 @@ $(window).scroll(function (e) {
 
     if ($(window).width() < 850) {
       if ($('.about-one').isInViewport()) {
-        $(".about-one").animate({ "left": "-52px" }, 2000).addClass('visible');
+        $(".about-one").animate({ "left": "-40px" }, 500).addClass('visible');
       }
       if ($('.about-two').isInViewport()) {
-          $(".about-two").animate({ "right": "0" }, 2000).addClass('visible');
+          $(".about-two").animate({ "right": "0" }, 600).addClass('visible');
       }
       if ($('.about-three').isInViewport()) {
-          $(".about-three").animate({ "left": "-52px" }, 2000).addClass('visible');
+          $(".about-three").animate({ "left": "-40px" }, 500).addClass('visible');
       }
     }
 });

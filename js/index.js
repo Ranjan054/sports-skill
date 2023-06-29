@@ -118,7 +118,7 @@ $(document).ready(function(){
     dots: true,
     // infinite: true,
     // speed: 300,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1400,
   });
 });
