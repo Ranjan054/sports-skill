@@ -80,7 +80,7 @@ const activateSlider = (isCardClicked, index) => {
   phoneImg.src = `images/phoneimg-${slideIndex}.png`
   slideRightTextWrapper[slideIndex-1].style.display = "block";  
   cards[slideIndex-1].classList.add("tab-card-active");
-  activateSliderId = setTimeout(activateSlider, 2000);
+  // activateSliderId = setTimeout(activateSlider, 2000);
 }
 
 activateSlider();
