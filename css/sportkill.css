@@ -47,7 +47,7 @@ body {
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1128px) {
   .container {
     max-width: 900px;
     padding: 0px 20px;
@@ -370,32 +370,29 @@ a:hover {
 .hhh {
   padding: 0px 0 0px 0px;
   position: relative;
-  /* width: 1400px; */
-  /* margin: 0 auto; */
+  display: flex;
+  align-items: center;
+}
 
+.featureImages {
+  display: flex;
+  float: left;
+  min-width: 690px;
 }
 
 .bbb {
-  /* padding: 0px 0 0px 0px; */
   position: relative;
-  /* width: 1400px; */
-
 }
 
 .ttt {
   padding: 0px 0 0px 0px;
   position: relative;
-  /* width: 1400px; */
-  /* margin: 0 auto; */
 
 }
 
 .aaa {
   padding: 0px 0 0px 0px;
   position: relative;
-  /* width: 1400px; */
-  /* margin: 0 auto; */
-
 }
 
 
@@ -685,10 +682,6 @@ a:hover {
 
 .featureContent {
   float: right;
-
-  padding-top: 80px;
-
-
 }
 
 
@@ -1303,12 +1296,6 @@ a:hover {
   cursor: pointer;
 }
 
-.featureImages {
-  display: flex;
-  float: left;
-  margin-left: 1%;
-}
-
 .featureContent {
   flex: 1;
   align-items: center;
@@ -1403,8 +1390,22 @@ a:hover {
   width: fit-content;
 }
 
+.about-us-tab-img-wrapper {
+  display: none;
+}
+
+.loginBtn-tab {
+  display: none;
+}
+
 
 @media ((min-width: 750px) and (max-width: 1128px)) {
+  .hp-layer__code {
+    width: 54%;
+    right: -40px;
+    top: 0px;
+  }
+
   .header .logo img {
     width: 136px;
   }
@@ -1482,7 +1483,7 @@ a:hover {
 
   .card1 {
     top: 44px;
-    left: -52px;
+    left: -23px;
   }
 
   .card2 {
@@ -1491,7 +1492,7 @@ a:hover {
 
   .card3 {
     top: 226px;
-    left: -52px;
+    left: -23px;
   }
 
   .img-wrapper-animate-bottom>.card1b {
@@ -1531,6 +1532,7 @@ a:hover {
 
   .tab-slide .content h4 {
     font-size: 16px;
+    min-height: 35px;
   }
 
   .tab-slide .content h2 {
@@ -1546,6 +1548,274 @@ a:hover {
   .tab-slide .content a {
     font-size: 10px;
     padding: 8px 16px;
+  }
+
+  .bbb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .counterSection .maps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .map-img {
+    width: 544px;
+  }
+
+  .maps p {
+    font-size: 34px;
+    margin-bottom: 45px;
+  }
+
+  .counterSection .countersContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+  }
+
+  .setone {
+    margin-right: 32px;
+  }
+
+  .setone, .settwo {
+    padding-left: 0;
+    align-items: center;
+    justify-content: space-between;
+    width: 208px;
+  }
+
+  .mainCounterWrap {
+    width: 88px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .countersContent .counter {
+    width: 88px;
+    height: 88px;
+    font-size: 52px;
+    line-height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .counter1 .counter {
+    border-radius: 16px 0 16px 16px;
+  }
+
+  .counter2 .counter {
+    border-radius: 16px 16px 0 16px;
+  }
+
+  .counter3 .counter {
+    border-radius: 0 16px 16px 16px;
+  }
+
+  .counter4 .counter {
+    border-radius: 16px 16px 16px 0;
+  }
+
+  .aboutusSection {
+    padding: 40px 0 40px;
+  }
+
+  .aboutContent {
+    padding-top: 0;
+  }
+ 
+
+  .countersContent b {
+    font-size: 22px;
+    line-height: 44px;
+  }
+
+  .aaa {
+    display: flex;
+    align-items: center;
+  }
+
+  .aboutContent span {
+    font-size: 11px;
+
+  }
+
+  .aboutContent h3 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .aboutContent p {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .aboutContent a {
+    font-size: 11px;
+    padding: 10px 35px;
+  }
+
+  .about-us {
+    width: 215px;
+  }
+
+  .about-one {
+    width: 180px;
+    top: 80px;
+  }
+
+  .about-two {
+    width: 124px;
+    top: 148px;
+  }
+
+  .about-three {
+    width: 180px;
+    top: 186px;
+  }
+
+  .aboutImg {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .hhh {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .featureImages {
+    min-width: 405px;
+    margin-left: 0;
+  }
+
+  .featureContent {
+    padding-top: 0;
+    flex: none;
+  }
+
+  .featureContent h3 {
+    font-size: 25px;
+    line-height: 38px;
+    margin-bottom: 11px;
+  }
+
+  .featureContent p {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 50px;
+  }
+
+  .featureContent a {
+    font-size: 10px;
+    padding: 8px 22px;
+  }
+
+  #rotator {
+    width: 310px;
+    height: 300px;
+    margin: 0;
+  }
+
+  #rotator>div {
+    width: 137px;
+    height: 137px;
+  }
+
+  .communityWrap h4 {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+
+  .about-us-tab-img-wrapper {
+    display: block;
+  }
+
+  .about-us-tab-img-wrapper a {
+    font-size: 11px;
+    padding: 10px 40px;
+    color: #fff;
+    border-radius: 25px;
+    background: #5AA6D8;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin: 30px auto 0;
+    display: block;
+    width: fit-content;
+  }
+
+  .tab-img {
+    text-align: center;
+  }
+
+  .about-us-tab-img-hide {
+    display: none;
+  }
+
+  .footer-logo {
+    width: 88px;
+  }
+
+  .upperfooter p {
+    font-size: 12px;
+  }
+
+  .upperfooter p a {
+    font-size: 10px;
+    padding: 8px 16px;
+  }
+
+  .footerLeftWrap p {
+    font-size: 15px;
+  }
+
+  .freeDemolink a {
+    font-size: 11px;
+  }
+
+  .footer .links li a {
+    font-size: 12px;
+  }
+
+  .socialMedialinks li a, .links li a {
+    font-size: 12px;
+  }
+
+  .app-download-img {
+    width: 102px;
+  }
+
+  .tnc li a {
+    font-size: 12px;
+  }
+
+  .social-icons {
+    width: 14px;
+  }
+
+  .social-icons-fb {
+    width: 7px;
+  }
+
+  .modal-dialog {
+    margin: 30px auto;
   }
 
 }
@@ -1837,15 +2107,15 @@ a:hover {
   }
 
   .counter2 .counter {
-    border-radius: 10px 0 10px 10px;
+    border-radius: 10px 10px 0 10px;
   }
 
   .counter3 .counter {
-    border-radius: 10px 0 10px 10px;
+    border-radius: 0 10px 10px 10px;
   }
 
   .counter4 .counter {
-    border-radius: 10px 0 10px 10px;
+    border-radius: 10px 10px 10px 0;
   }
 
   .aaa {
@@ -1946,8 +2216,7 @@ a:hover {
   }
 
   .featureImages {
-    /* margin-top: 100px;
-    margin-left: -2px; */
+    min-width: auto;
     margin: 100px auto 0;
   }
 

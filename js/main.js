@@ -53,7 +53,7 @@ $(window).scroll(function (e) {
         $('.mainCounterWrap b').addClass('animated fadeIn');
     }
 
-    if ($(window).width() > 850) {
+    if ($(window).width() > 1128) {
       if ($('.about-one').isInViewport()) {
         $(".about-one").animate({ "left": "586px" }, 2000).addClass('visible');
       }
@@ -65,8 +65,20 @@ $(window).scroll(function (e) {
       }
     }
 
+    if ($(window).width() >= 750 && $(window).width() <= 1128) {
+      if ($('.about-one').isInViewport()) {
+        $(".about-one").animate({ "left": "52" }, 800).addClass('visible');
+      }
+      if ($('.about-two').isInViewport()) {
+          $(".about-two").animate({ "right": "20" }, 900).addClass('visible');
+      }
+      if ($('.about-three').isInViewport()) {
+          $(".about-three").animate({ "left": "52" }, 800).addClass('visible');
+      }
+    }
 
-    if ($(window).width() < 850) {
+
+    if ($(window).width() < 750) {
       if ($('.about-one').isInViewport()) {
         $(".about-one").animate({ "left": "-40px" }, 500).addClass('visible');
       }
@@ -90,11 +102,15 @@ $("document").ready(function() {
 
   for (var i = 0; i < block.length; i++) {
     var elem = block[i];
-    if ($(window).width() > 850) {
+    if ($(window).width() > 1128) {
     x = 250 * Math.cos(angle) + 150;
     y = 250 * Math.sin(angle) + 150;
     }
-    if ($(window).width() < 850) {
+    if ($(window).width() >= 750 && $(window).width() <= 1128) {
+      x = 115 * Math.cos(angle) + 83;
+      y = 115 * Math.sin(angle) + 83;
+    }
+    if ($(window).width() < 750) {
       // x = 120 * Math.cos(angle) + 120;
       // y = 120 * Math.sin(angle) + 120;
       x = 115 * Math.cos(angle) + 83;
