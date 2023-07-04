@@ -685,7 +685,6 @@ a:hover {
 }
 
 
-
 .communityWrap {
   padding: 50px 0 50px 0px;
   background: url('../images/pattern-bg.png') no-repeat center top;
@@ -699,7 +698,7 @@ a:hover {
   font-size: 51px;
   line-height: 80px;
   letter-spacing: -3px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   color: #fff;
   text-align: center;
 }
@@ -1390,12 +1389,19 @@ a:hover {
   width: fit-content;
 }
 
-.about-us-tab-img-wrapper {
+.loginBtn-tab {
   display: none;
 }
 
-.loginBtn-tab {
-  display: none;
+.about-us-tab-img-wrapper .tab-img a {
+  cursor: pointer;
+  max-width: 1185px;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-us-tab-img-wrapper .tab-img img {
+  width: 100%;
 }
 
 
@@ -1627,7 +1633,7 @@ a:hover {
   }
 
   .aboutusSection {
-    padding: 40px 0 40px;
+    padding: 40px 0 80px;
   }
 
   .aboutContent {
@@ -1738,27 +1744,11 @@ a:hover {
 
   .communityWrap h4 {
     font-size: 45px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .about-us-tab-img-wrapper {
     display: block;
-  }
-
-  .about-us-tab-img-wrapper a {
-    font-size: 11px;
-    padding: 10px 40px;
-    color: #fff;
-    border-radius: 25px;
-    background: #5AA6D8;
-    padding: 15px 40px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    margin: 30px auto 0;
-    display: block;
-    width: fit-content;
   }
 
   .tab-img {
@@ -2339,6 +2329,7 @@ a:hover {
   .communityWrap h4 {
     font-size: 34px;
     line-height: 80px;
+    margin-bottom: 0;
   }
 
   .slides img {
